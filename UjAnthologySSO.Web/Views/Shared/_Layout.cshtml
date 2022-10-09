@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UjAnthologySSO.Web</title>
+@*    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/slicknav.css" />
+    <link rel="stylesheet" href="~/css/flaticon.css" />
+    <link rel="stylesheet" href="~/css/animate.min.css"/>
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/slick.css" />
+    <link rel="stylesheet" href="~/css/nice-select.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+@*    <link rel="stylesheet" href="~/UjAnthologySSO.Web.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+@*begin: Header Navbar*@
+<div class="header-area">
+    <div class="main-header header-sticky">
+        <div class="container-fluid">
+            <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                <div class="left-content d-flex align-items-center">
+                    <div class="logo">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="/img/UJ_Logo.png"
+                                 style="width: 100%; height: 100px" alt=""/>
+                        </a>
+                    </div>
+                    <!-- Search Box -->
+                    <form action="#" class="form-box">
+                        <input type="text"
+                               name="Search"
+                               placeholder="Search courses.."/>
+                        <div class="search-icon">
+                            <i class="ti-search"></i>
+                        </div>
+                    </form>
+                </div>
+                <!-- Main-menu -->
+                <div class="main-menu d-none d-lg-block">
+                    <nav>
+                        <ul id="navigation">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-area="Admin"  asp-controller="Courses" asp-action="Index">Browse Courses</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">About</a></li>
+                            <li><a asp-area="Admin" asp-controller="CoverType" asp-action="Index">Covers</a></li>
+                            
+                            <li>
+                                <a href="#">Blog</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Blog Details</a></li>
+                                    <li><a href="#">Element</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Contact</a></li>
+
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Index" class="btn header-btn2">Sign In</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+@*end: Header Navbar*@
+<div class="container">
+    <main role="main" class="pb-3">
+        <partial name="_Notification"/>
+        @RenderBody()<!-- Scroll Up -->
+
+    </main>
+  
+</div>
+@*Begin Footer*@
+    <footer>
+        <div class="footer-area footer-padding">
+            <div class="footer-wrapper">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo mb-25">
+                                        <a href="index.html">
+                                            <img src="assets/img/logo/uj_logo.gif"
+                                                 style="width: 100%; height: 50px"
+                                                 alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p>
+                                                The automated process starts as soon as your clothes
+                                                go into the machine.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- social -->
+                                    <div class="footer-social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://bit.ly/sai4ull">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Subjects</h4>
+                                    <ul>
+                                        <li><a href="#">Design & creatives</a></li>
+                                        <li><a href="#">Telecommunication</a></li>
+                                        <li><a href="#">Restaurant</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom area -->
+                <div class="footer-bottom-area">
+                    <div class="container">
+                        <div class="footer-border">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-xl-12">
+                                    <div class="footer-copy-right text-center">
+                                        <p>
+                                            Copyright &copy;
+                                            <script>
+                                                document.write(new Date().getFullYear());
+                                            </script>
+                                            All rights reserved |
+                                            <a href="https://uj.ac.za"
+                                               target="_blank"
+                                               rel="nofollow noopener">University Of Johannesburg</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+@*End Footer*@
+@*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+@*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+@*<script src="~/js/site.js" asp-append-version="true"></script>*@
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="~/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+<script src="~/js/slick.min.js"></script>
+<script src="~/js/jquery.slicknav.min.js"></script>
+<script src="~/js/wow.min.js"></script>
+<script src="~/js/jquery.nice-select.min.js"></script>
+<script src="~/js/jquery.counterup.min.js"></script>
+<script src="~/js/waypoints.min.js"></script>
+<script src="~/js/plugins.js"></script>
+<script src="~/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
