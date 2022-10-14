@@ -50,22 +50,25 @@
                     <nav>
                         <ul id="navigation">
                             <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li><a asp-area="Admin"  asp-controller="Courses" asp-action="Index">Browse Courses</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="Index">About</a></li>
-                            <li><a asp-area="Admin" asp-controller="CoverType" asp-action="Index">Covers</a></li>
+                            
                             
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="#">Admin</a>
                                 <ul class="submenu">
+                                    <li><a asp-area="Admin"  asp-controller="Courses" asp-action="Index">Browse Courses</a></li>
+                                    <li><a asp-area="Admin" asp-controller="CoverType" asp-action="Index">Covers</a></li>
+                                    <li><a asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a></li>
+
                                     <li><a href="#">Blog</a></li>
                                     <li><a href="#">Blog Details</a></li>
                                     <li><a href="#">Element</a></li>
                                 </ul>
                             </li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Contact</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
 
                             <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Index" class="btn header-btn2">Sign In</a>
+                                <a asp-area="" asp-controller="Home" asp-action="SignIn" class="btn header-btn2">Sign In</a>
                             </li>
                         </ul>
                     </nav>
@@ -153,6 +156,9 @@
                                             <a href="https://uj.ac.za"
                                                target="_blank"
                                                rel="nofollow noopener">University Of Johannesburg</a>
+                                            |
+                                            <a asp-controller="Home" asp-action="Privacy"
+                                              >Terms &amp; Conditions</a>
                                         </p>
                                     </div>
                                 </div>
@@ -180,7 +186,7 @@
 <script src="~/js/waypoints.min.js"></script>
 <script src="~/js/plugins.js"></script>
 <script src="~/js/main.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
